@@ -19,3 +19,7 @@ IDEA中安装lombok插件
 @Getter：注解在属性上；为属性提供 getting 方法
 https://www.jianshu.com/p/e80ab37294ed
 https://blog.csdn.net/xue632777974/article/details/80437452?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param
+
+@AutoWired 在有bean的情况下标红
+把他变成警告就万事大吉了
+https://developer.aliyun.com/article/637374
