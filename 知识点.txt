@@ -1,0 +1,63 @@
+Etcd+gRPC+ApacheShiro
+基于Spring+SpringBoot+Mybatis+Redis+Etcd+gRPC+ApacheShiro
+打造的基于角色的权限访问控制（RBAC）统一权限管理平台，
+提供权限相关的公共服务模块：系统管理、组织管理、
+用户管理、角色管理、资源管理、权限分配、会话管理、AD控制台、日志记录等功能。
+
+SWagger：
+@Api(value = "认证方式", description = "认证方式")
+通过注解将注解内容综合起来展现的工具
+https://www.cnblogs.com/FlyAway2013/p/7510279.html
+swagger常用注解说明
+https://www.jianshu.com/p/b0b19368e4a8
+
+@Permission
+自定义的注解用来权限检验
+@Permission(check = true, functionCode = "upms:system:update")
+Springboot通过AOP来进行权限检验
+https://segmentfault.com/a/1190000012845239
+
+Etcd 
+是一个高可用强一致性的服务发现存储仓库
+实际上，etcd 作为一个受到 ZooKeeper 与 doozer 启发而催生的项目，
+除了拥有与之类似的功能外，更专注于以下四点。
+
+简单：基于 HTTP+JSON 的 API 让你用 curl 就可以轻松使用。
+安全：可选 SSL 客户认证机制。
+快速：每个实例每秒支持一千次写操作。
+可信：使用 Raft 算法充分实现了分布式。
+
+https://www.infoq.cn/article/etcd-interpretation-application-scenario-implement-principle
+https://juejin.im/post/6844904031186321416
+Raft 算法介绍
+https://www.youtube.com/watch?v=6bBggO6KN_k
+
+gRPC 
+是一个高性能、开源和通用的 RPC 框架 
+远程过程调用协议RPC（Remote Procedure Call Protocol)
+https://www.jianshu.com/p/b0343bfd216e
+RPC框架 gRPC的Java实现的底层网络库是基于Netty开发而来，其Go实现是基于net库。
+Netty - Netty框架不局限于RPC，更多的是作为一种网络协议的实现框架，
+比如HTTP，由于RPC需要高效的网络通信，就可能选择以Netty作为基础。
+https://grpc.io/docs/languages/java/basics/ 官方文档
+
+容器技术，Etcd用到了容器
+https://zhuanlan.zhihu.com/p/39155341
+
+@ConditionalOnClass
+@ConditionalOnClass({ Servlet.class, Tomcat.class })
+Conditional 有条件的
+就是说只有在classpath下能找到Servlet，Tomcat类才会构建这个bean
+@Conditional(TestCondition.class)这句代码可以标注在类上面，
+表示该类下面的所有@Bean都会启用配置，也可以标注在方法上面，只是对该方法启用配置。
+@ConditionalOnBean（仅仅在当前上下文中存在某个对象时，才会实例化一个Bean）
+@ConditionalOnClass（某个class位于类路径上，才会实例化一个Bean）
+@ConditionalOnExpression（当表达式为true的时候，才会实例化一个Bean）
+@ConditionalOnMissingBean（仅仅在当前上下文中不存在某个对象时，才会实例化一个Bean）
+@ConditionalOnMissingClass（某个class类路径上不存在的时候，才会实例化一个Bean）
+@ConditionalOnNotWebApplication（不是web应用）
+https://blog.csdn.net/lbh199466/article/details/88303897
+
+@AutoConfigureOrder
+@Order变体
+@Order(4)自动配置的优先级

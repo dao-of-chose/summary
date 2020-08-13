@@ -1,0 +1,21 @@
+ajax传递的数据类型json传递
+https://www.cnblogs.com/lichuntian/p/4845735.html
+
+JSON传参时字段首字母大写，对应的javaBean中该字段的值一直为null
+https://blog.csdn.net/Lieforlove/article/details/88635766
+
+maven中pom 配有plugin（插件）需要 compile编译
+https://blog.csdn.net/mbshqqb/article/details/79584949
+
+maven用好reimport
+
+@Slf4j 注解的使用方法
+slf4j是一个日志标准，使用它可以完美的桥接到具体的日志框架，
+必要时可以简便的更换底层的日志框架，而不需要关心具体的日志框架的实现
+（slf4j-simple、logback等）。
+IDEA中安装lombok插件
+在类上添加@Slf4j注解，在方法中直接使用log
+@Setter：注解在属性上；为属性提供 setting 方法
+@Getter：注解在属性上；为属性提供 getting 方法
+https://www.jianshu.com/p/e80ab37294ed
+https://blog.csdn.net/xue632777974/article/details/80437452?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param
