@@ -61,3 +61,7 @@ https://blog.csdn.net/lbh199466/article/details/88303897
 @AutoConfigureOrder
 @Order变体
 @Order(4)自动配置的优先级
+
+@Scheduled
+SpringBoot 定时任务
+https://blog.csdn.net/qq_33556185/article/details/51852537
