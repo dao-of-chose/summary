@@ -23,3 +23,5 @@ https://blog.csdn.net/xue632777974/article/details/80437452?utm_medium=distribut
 @AutoWired 在有bean的情况下标红
 把他变成警告就万事大吉了
 https://developer.aliyun.com/article/637374
+
+将项目改名最好还在IDEA里面进行，直接改目录容易出错

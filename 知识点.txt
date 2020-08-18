@@ -65,3 +65,17 @@ https://blog.csdn.net/lbh199466/article/details/88303897
 @Scheduled
 SpringBoot 定时任务
 https://blog.csdn.net/qq_33556185/article/details/51852537
+
+Postman里面Post请求的四种类型的数据
+1.form-data请求
+2.x-www-form-urlencoded：
+3.raw
+4.binary
+https://blog.csdn.net/chenmozhe22/article/details/94596893
+
+MyBatis generator生成的Example文件用法
+MyBatis generator用数据库表生成数据代码的时候，除了生成实体的POJO以外，
+会同时生成Example文件，以及在mapper.xml中生成Example的sql语句。
+https://www.cnblogs.com/dekevin/p/12301824.html
+http://docs.flycloud.me/docs/MBG/generatedobjects/exampleClassUsage.html
+
