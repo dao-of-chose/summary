@@ -78,4 +78,5 @@ MyBatis generator用数据库表生成数据代码的时候，除了生成实体
 会同时生成Example文件，以及在mapper.xml中生成Example的sql语句。
 https://www.cnblogs.com/dekevin/p/12301824.html
 http://docs.flycloud.me/docs/MBG/generatedobjects/exampleClassUsage.html
+https://developer.aliyun.com/article/645347
 

@@ -1,0 +1,102 @@
+一、添加会议室
+http://10.98.164.197:9002/manage/meetingroom/add
+{
+	"id": 14,
+    "edifice": "松日鼎盛大厦",
+    "roomFloor": 19,
+    "roomNum": "1802",
+    "roomName": "1802会议室",
+    "roomCapacity": 10,
+    "roomEquipment": "仅支持无线投影（外访人员无法使用）",
+    "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/1102.png",
+    "sysCtime": 1553152067000,
+    "sysUtime": 1553152448000,
+    "roomStatus": 1
+    
+}
+成功返回
+{
+    "code": 0,
+    "message": "成功",
+    "result": 1,
+    "information": null
+}
+
+二、修改会议室
+http://10.98.164.197:9002/manage/meetingroom/update
+{
+	"id": 14,
+    "edifice": "松日鼎盛大厦",
+    "roomFloor": 19,
+    "roomNum": "1802",
+    "roomName": "1802会议室",
+    "roomCapacity": 10,
+    "roomEquipment": "仅支持无线投影（外访人员无法使用）",
+    "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/1102.png",
+    "sysCtime": 1553152067000,
+    "sysUtime": 1553152448000,
+    "roomStatus": 1
+    
+}
+成功返回
+{
+    "code": 0,
+    "message": "成功",
+    "result": 1,
+    "information": null
+}
+
+三、删除会议室
+http://10.98.164.197:9002/manage/meetingroom/delete
+{
+	"id": 15             
+}
+成功返回
+{
+    "code": 0,
+    "message": "成功",
+    "result": 1,
+    "information": null
+}
+
+四、分页查询
+http://10.98.164.197:9002/manage/meetingroom/selectByPage
+第三页，每页5行数据
+{
+	"page":3,
+	"size": 5
+}
+成功返回
+{
+    "code": 0,
+    "message": "成功",
+    "result": [
+        {
+            "id": 12,
+            "edifice": "松日鼎盛大厦",
+            "roomFloor": 11,
+            "roomNum": "1101",
+            "roomName": "1101会议室",
+            "roomCapacity": 16,
+            "roomEquipment": "投影、会议电话机、白板",
+            "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/1101.png",
+            "sysCtime": 1553152006000,
+            "sysUtime": 1553152451000,
+            "roomStatus": 1
+        },
+        {
+            "id": 13,
+            "edifice": "松日鼎盛大厦",
+            "roomFloor": 11,
+            "roomNum": "1102",
+            "roomName": "1102会议室",
+            "roomCapacity": 10,
+            "roomEquipment": "仅支持无线投影（外访人员无法使用）",
+            "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/1102.png",
+            "sysCtime": 1553152067000,
+            "sysUtime": 1553152448000,
+            "roomStatus": 1
+        }
+    ],
+    "information": null
+}
