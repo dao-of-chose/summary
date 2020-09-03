@@ -7,3 +7,6 @@ https://juejin.im/post/6844904201579937800
 Postman
 
 MyBatis generator
+
+GitLab Tags--创建一个Tags，名字从群里来，迭代的版本号
+Jenkins 加上Tag打包，发布
