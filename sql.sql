@@ -9,7 +9,7 @@ select distinct b.* from  meeting_room_reserve  b
 join meeting_room_available c on b.reserve_record_id = c.reserve_record_id
 where c.room_id = 5 and c.reserve_date = "2020-08-27" and c.reserver_begin > "08:00";
 
-select id, room_id, reserve_date, reserve_begin, reserve_end 
+select id, room_id, reserve_date, reserver_begin, reserver_end 
 from meeting_room_available where reserve_date = '2020-08-27' and room_id = 1;
 
 update meeting_room_available set reserve_record_id = 1095966455733710899 

@@ -1,17 +1,13 @@
 一、添加会议室
-http://10.98.164.197:9002/manage/meetingroom/add
+http://172.18.35.68:9002/manage/meetingroom/add
 {
-	"id": 14,
     "edifice": "松日鼎盛大厦",
     "roomFloor": 19,
     "roomNum": "1802",
     "roomName": "1802会议室",
     "roomCapacity": 10,
     "roomEquipment": "仅支持无线投影（外访人员无法使用）",
-    "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/1102.png",
-    "sysCtime": 1553152067000,
-    "sysUtime": 1553152448000,
-    "roomStatus": 1
+    "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/1102.png"
     
 }
 成功返回
@@ -23,19 +19,16 @@ http://10.98.164.197:9002/manage/meetingroom/add
 }
 
 二、修改会议室
-http://10.98.164.197:9002/manage/meetingroom/update
+http://172.18.35.68:9002/manage/meetingroom/update
 {
-	"id": 14,
+	"id": 4,
     "edifice": "松日鼎盛大厦",
-    "roomFloor": 19,
-    "roomNum": "1802",
-    "roomName": "1802会议室",
-    "roomCapacity": 10,
-    "roomEquipment": "仅支持无线投影（外访人员无法使用）",
-    "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/1102.png",
-    "sysCtime": 1553152067000,
-    "sysUtime": 1553152448000,
-    "roomStatus": 1
+    "roomFloor": 2,
+    "roomNum": "205",
+    "roomName": "205会议室",
+    "roomCapacity": 5,
+    "roomEquipment": "TV、白板",
+    "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/205.png"
     
 }
 成功返回
@@ -47,7 +40,7 @@ http://10.98.164.197:9002/manage/meetingroom/update
 }
 
 三、删除会议室
-http://10.98.164.197:9002/manage/meetingroom/delete
+http://172.18.35.68:9002/manage/meetingroom/delete
 {
 	"id": 15             
 }
@@ -60,48 +53,89 @@ http://10.98.164.197:9002/manage/meetingroom/delete
 }
 
 四、分页查询
-http://10.98.164.197:9002/manage/meetingroom/selectByPage
-第三页，每页5行数据
+http://172.18.35.68:9002/manage/meetingroom/selectByPage
+第3页，每页5行数据
 {
-	"pageNum": 3
-	"pageSize":5,
+	"pageNum": 1,
+	"pageSize":5
 }
 成功返回
+roomStatus为2，代表该会议室现在还在屏蔽列表里
+
 {
     "code": 0,
     "message": "成功",
     "result": {
         "data": [
             {
-                "id": 9,
+                "id": 1,
                 "edifice": "松日鼎盛大厦",
-                "roomFloor": 25,
-                "roomNum": "2512",
-                "roomName": "2512会议室",
-                "roomCapacity": 4,
-                "roomEquipment": "TV、白板",
-                "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/2512.png",
-                "sysCtime": 1550117336000,
-                "sysUtime": 1550117805000,
+                "roomFloor": 2,
+                "roomNum": "201",
+                "roomName": "201会议室",
+                "roomCapacity": 10,
+                "roomEquipment": "投影、会议电话机、白板、饮水机",
+                "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/201.png",
+                "sysCtime": 1546567759000,
+                "sysUtime": 1550117750000,
                 "roomStatus": 1
             },
             {
-                "id": 10,
+                "id": 2,
                 "edifice": "松日鼎盛大厦",
-                "roomFloor": 25,
-                "roomNum": "2513",
-                "roomName": "2513会议室",
+                "roomFloor": 2,
+                "roomNum": "202",
+                "roomName": "202会议室",
                 "roomCapacity": 10,
+                "roomEquipment": "投影、会议电话机、白板、饮水机",
+                "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/202.png",
+                "sysCtime": 1546567818000,
+                "sysUtime": 1550117756000,
+                "roomStatus": 2
+            },
+            {
+                "id": 3,
+                "edifice": "松日鼎盛大厦",
+                "roomFloor": 2,
+                "roomNum": "203",
+                "roomName": "203会议室",
+                "roomCapacity": 8,
+                "roomEquipment": "TV、白板",
+                "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/203.png",
+                "sysCtime": 1546567826000,
+                "sysUtime": 1553156145000,
+                "roomStatus": 1
+            },
+            {
+                "id": 4,
+                "edifice": "松日鼎盛大厦",
+                "roomFloor": 2,
+                "roomNum": "205",
+                "roomName": "205会议室",
+                "roomCapacity": 5,
+                "roomEquipment": "白板",
+                "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/205.png",
+                "sysCtime": 1546592198000,
+                "sysUtime": 1599450372000,
+                "roomStatus": 1
+            },
+            {
+                "id": 12,
+                "edifice": "松日鼎盛大厦",
+                "roomFloor": 11,
+                "roomNum": "1101",
+                "roomName": "1101会议室",
+                "roomCapacity": 16,
                 "roomEquipment": "投影、会议电话机、白板",
-                "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/2513.png",
-                "sysCtime": 1550117193000,
-                "sysUtime": 1550117811000,
+                "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/1101.png",
+                "sysCtime": 1553152006000,
+                "sysUtime": 1553152451000,
                 "roomStatus": 1
             }
         ],
         "totalCount": 12,
         "totalPage": 3,
-        "pageNum": 3
+        "pageNum": 1
     },
     "information": null
 }

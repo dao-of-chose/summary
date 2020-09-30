@@ -33,3 +33,19 @@ json 传递 bigint可能会截断后面几位数
 
 当用json只需要传几个参数，又不想新建一个类时：
 https://my.oschina.net/u/779531/blog/893549
+
+java.util.ArrayList$SubList cannot be cast to 
+因为 subList 返回的 List 是 ArrayList 内部类 SubList（继承自 AbstractList），
+看起来都是 List 的实现，但是不是同一个子类，无法强转为 ArrayList
+SubList 转化为 ArrayList 可以用 Guava 中的封装方法
+Lists.newArrayList(subList)
+https://blog.csdn.net/rui888/article/details/104268024
+
+mybatis resultMap的各种设置语句
+https://blog.csdn.net/u012702547/article/details/54599132
+
+循环删除list，用迭代器，但是要用iterator.remove();（或者从后面开始for循环）
+https://www.nonelonely.com/article/1592376530301
+
+循环给List<Object>赋值，不要用同一个Object，List会保存Object的存储位置，而不是值
+

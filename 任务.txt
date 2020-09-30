@@ -1,0 +1,144 @@
+
+http://10.0.32.189:9002/manage/meetingroom/selectByPage
+
+{"pageNum":1,"pageSize":10,"order":"sysCtime","sort":1,"filter":{}}
+返回：
+{
+    "code": 0,
+    "message": "成功",
+    "result": {
+        "data": [
+            {
+                "id": 18,
+                "edifice": "士大夫大师傅",
+                "roomFloor": 1,
+                "roomNum": "地方大师傅",
+                "roomName": "地方大师傅",
+                "roomCapacity": 1,
+                "roomEquipment": "打发打发",
+                "roomPictureUrl": "",
+                "sysCtime": 1600252883000,
+                "sysUtime": 1600252883000,
+                "roomStatus": 2,
+                "meetingRoomRule": [
+                    {
+                        "id": "18",
+                        "roomId": 18,
+                        "startTime": 1599408000000,
+                        "endTime": 1603382400000,
+                        "sysCtime": 1600252883000,
+                        "sysUtime": 1600252883000,
+                        "isDelete": 1
+                    },
+                    {
+                        "id": "18",
+                        "roomId": 18,
+                        "startTime": 1598889600000,
+                        "endTime": 1604073600000,
+                        "sysCtime": 1600252883000,
+                        "sysUtime": 1600252883000,
+                        "isDelete": 1
+                    },
+                    {
+                        "id": "18",
+                        "roomId": 18,
+                        "startTime": 1600185600000,
+                        "endTime": 1603900800000,
+                        "sysCtime": 1600252883000,
+                        "sysUtime": 1600252883000,
+                        "isDelete": 1
+                    }
+                ]
+            },
+            {
+                "id": 20,
+                "edifice": "豆腐干地方",
+                "roomFloor": 1,
+                "roomNum": "的风格d'f",
+                "roomName": "的风格f'd",
+                "roomCapacity": 1,
+                "roomEquipment": "fd",
+                "roomPictureUrl": "",
+                "sysCtime": 1600253260000,
+                "sysUtime": 1600253260000,
+                "roomStatus": 1,
+                "meetingRoomRule": [
+                    {
+                        "id": "20",
+                        "roomId": null,
+                        "startTime": null,
+                        "endTime": null,
+                        "sysCtime": 1600253260000,
+                        "sysUtime": 1600253260000,
+                        "isDelete": null
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "edifice": "松日鼎盛大厦",
+                "roomFloor": 2,
+                "roomNum": "201",
+                "roomName": "201会议室",
+                "roomCapacity": 10,
+                "roomEquipment": "投影、会议电话机、白板、饮水机",
+                "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/201.png",
+                "sysCtime": 1546567759000,
+                "sysUtime": 1550117750000,
+                "roomStatus": 1,
+                "meetingRoomRule": [
+                    {
+                        "id": "1",
+                        "roomId": 1,
+                        "startTime": 1554086771000,
+                        "endTime": 1556592371000,
+                        "sysCtime": 1546567759000,
+                        "sysUtime": 1550117750000,
+                        "isDelete": 1
+                    }
+                ]
+            }
+        ],
+        "totalCount": 15,
+        "totalPage": 5,
+        "pageNum": 1
+    },
+    "information": null
+}
+
+
+
+
+http://10.0.32.189:9002/manage/meetingroom/view
+{"id":"1"}
+
+{
+    "code": 0,
+    "message": "成功",
+    "result": {
+        "id": 1,
+        "edifice": "松日鼎盛大厦",
+        "roomFloor": 2,
+        "roomNum": "201",
+        "roomName": "201会议室",
+        "roomCapacity": 10,
+        "roomEquipment": "投影、会议电话机、白板、饮水机",
+        "roomPictureUrl": "https://resource.wesure100.com/meetingroom/songridingsheng/201.png",
+        "sysCtime": 1546567759000,
+        "sysUtime": 1550117750000,
+        "roomStatus": 1,
+        "meetingRoomRule": [
+            {
+                "id": "1",
+                "roomId": 1,
+                "startTime": 1554086771000,
+                "endTime": 1556592371000,
+                "sysCtime": 1546567759000,
+                "sysUtime": 1550117750000,
+                "isDelete": 1
+            }
+        ]
+    },
+    "information": null
+}
+
