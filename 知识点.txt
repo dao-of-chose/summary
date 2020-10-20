@@ -80,4 +80,14 @@ https://www.cnblogs.com/dekevin/p/12301824.html
 http://docs.flycloud.me/docs/MBG/generatedobjects/exampleClassUsage.html
 https://developer.aliyun.com/article/645347
 
-递归：https://mp.weixin.qq.com/s?__biz=MzI5MTU1MzM3MQ==&mid=2247483813&idx=1&sn=423c8804cd708b8892763a41cfcc8886&scene=21#wechat_redirect
+递归：
+https://mp.weixin.qq.com/s?__biz=MzI5MTU1MzM3MQ==&mid=2247483813&idx=1&sn=423c8804cd708b8892763a41cfcc8886&scene=21#wechat_redirect
+
+MYSQL视图
+https://www.cnblogs.com/geaozhang/p/6792369.html
+
+
+
+
+
+

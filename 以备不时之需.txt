@@ -1,0 +1,77 @@
+//    @ApiOperation(value = "会议室修改", notes = "权限码[upms:user:organization]")
+//    @RequestMapping(value = "/update", method = RequestMethod.POST)
+//    @ResponseBody
+//    public UpmsResult meetingRoomUpdate(@RequestBody MeetingRoom meetingRoom, HttpServletRequest req) {
+//        UpmsResult upmsResult = null;
+//        String userName = req.getHeader("X-WESURE-ENAME");
+//
+//        int result = meetingroomService.updateByPrimaryKey(meetingRoom);
+//        if(result != 1){
+//            return new UpmsResult(BaseMessage.ERROR,null,"会议室信息更新数据库失败");
+//        }
+//        MeetingRoomRuleExample ruleExample = new MeetingRoomRuleExample();
+//        ruleExample.or().andRoomIdEqualTo(meetingRoom.getId().intValue()).andIsDeleteEqualTo(1);
+//
+//        List<MeetingRoomRule> roomRules = meetingroomRuleService.selectByExample(ruleExample);
+//
+//        List<TimeBlock> ruleDates = new ArrayList<>();
+//
+//        if(roomRules != null && roomRules.size() > 0){
+//            //遍历保存已有的屏蔽时间段
+//            for( MeetingRoomRule meetingRoomRule : roomRules){
+//                TimeBlock date = new TimeBlock();
+//                date.setStartTime(meetingRoomRule.getStartTime());
+//                date.setEndTime(meetingRoomRule.getEndTime());
+//                date.setMeetingRuleId(meetingRoomRule.getId());
+//                ruleDates.add(date);
+//            }
+//            Collections.sort(ruleDates);
+//        }
+//
+//
+//        if(meetingRoom.getMeetingRoomRule() != null && meetingRoom.getMeetingRoomRule().size() > 0){
+//            List<TimeBlock> dates = new ArrayList<>();
+//            //将所有屏蔽时间段合并整理,与已有的相比较，若相同，不用改
+//            for( MeetingRoomRule meetingRoomRule1 : meetingRoom.getMeetingRoomRule()){
+//                TimeBlock date = new TimeBlock();
+//                date.setStartTime(meetingRoomRule1.getStartTime());
+//                date.setEndTime(meetingRoomRule1.getEndTime());
+//                dates.add(date);
+//            }
+//            //将时间段合并整理
+//            dates = MixTimeBlockUtil.mixDate(dates);
+//            //如果相同，说明没有更改屏蔽信息
+//            if (isEqual(ruleDates,dates)){
+//                return new UpmsResult(BaseMessage.SUCCESS,null);
+//            }
+//
+//            //删除所有
+//            for( MeetingRoomRule meetingRoomRule1 : roomRules){
+//                upmsResult = meetingroomRuleService.delete(meetingRoomRule1);
+//                if(upmsResult.getCode() == BaseMessage.ERROR.getCode())
+//                    return upmsResult;
+//            }
+//            //逐个添加
+//            MeetingRoomRule meetingRoomRule = new MeetingRoomRule();
+//            meetingRoomRule.setRoomId(meetingRoom.getId().intValue());
+//            meetingRoomRule.setIsDelete(1);
+//
+//            for (TimeBlock time : dates) {
+//                meetingRoomRule.setStartTime(time.getStartTime());
+//                meetingRoomRule.setEndTime(time.getEndTime());
+//                upmsResult =  meetingroomRuleService.add(meetingRoomRule);
+//                if(upmsResult.getCode() == BaseMessage.ERROR.getCode())
+//                    return upmsResult;
+//            }
+//
+//        }else {
+//            for( MeetingRoomRule meetingRoomRule1 : roomRules){
+//                upmsResult = meetingroomRuleService.delete(meetingRoomRule1);
+//                if(upmsResult.getCode() == BaseMessage.ERROR.getCode())
+//                    return upmsResult;
+//            }
+//        }
+//
+//        return new UpmsResult(BaseMessage.SUCCESS,null);
+//
+//    }
