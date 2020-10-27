@@ -49,3 +49,11 @@ https://www.nonelonely.com/article/1592376530301
 
 循环给List<Object>赋值，不要用同一个Object，List会保存Object的存储位置，而不是值
 
+mySql查询不区分大小写，更改编码集或者加binary字段可解
+Mysql默认的字符检索策略：utf8_general_ci，表示不区分大小写；
+utf8_general_cs表示区分大小写，utf8_bin表示二进制比较，同样也区分大小写 。（注意：在Mysql5.6.10版本中，不支持utf8_genral_cs！！！！）
+https://blog.csdn.net/Veir_123/article/details/73730751
+
+mySql datetime时间不能直接加减需要用timestampdiff(second, t1, t2),
+https://blog.csdn.net/white_ice/article/details/79900402
+

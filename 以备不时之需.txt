@@ -75,3 +75,12 @@
 //        return new UpmsResult(BaseMessage.SUCCESS,null);
 //
 //    }
+
+#spring.cloud.etcd.core.urls[0]=http://10.80.16.39:9001
+#spring.cloud.etcd.core.urls[1]=http://10.80.16.62:9001
+#spring.cloud.etcd.core.urls[2]=http://10.80.16.63:9001
+#wesure.etcd.uris=http://etcd1.prd.com:9001,http://etcd2.prd.com:9001,http://etcd3.prd.com:9001
+
+#spring.cloud.etcd.core.urls[0]=http://etcd1.uat.com:9003
+#spring.cloud.etcd.core.urls[1]=http://etcd2.uat.com:9003
+#spring.cloud.etcd.core.urls[2]=http://etcd3.uat.com:9003

@@ -19,4 +19,18 @@ xavier
 
 louis
 
+select * from wesure_wof_upms_sit.meeting_room_available mra 
+where id = any 
+(select SUBSTRING_INDEX(available_id_desc ,';',1) from wesure_wof_upms_sit.meeting_room_reserve mrr where sys_ctime between '2020-10-12 16:00:00'  and '2020-10-20 11:00:00')
+and room_id = 47
+
+
+select * from wesure_wof_upms_sit.meeting_room_available mra 
+where id = any 
+(select SUBSTRING_INDEX(available_id_desc ,';',1) from wesure_wof_upms_sit.meeting_room_reserve mrr where sys_ctime between '2020-10-12 16:00:00'  and '2020-10-20 11:00:00')
+and room_id = 47
+
+select *,SUBSTRING_INDEX(available_id_desc ,';',1) as str from wesure_wof_upms_sit.meeting_room_reserve mrr where sys_ctime between '2020-10-12 16:00:00'  and '2020-10-20 11:00:00'
+
+
 
