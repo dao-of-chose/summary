@@ -84,3 +84,24 @@
 #spring.cloud.etcd.core.urls[0]=http://etcd1.uat.com:9003
 #spring.cloud.etcd.core.urls[1]=http://etcd2.uat.com:9003
 #spring.cloud.etcd.core.urls[2]=http://etcd3.uat.com:9003
+
+ List<TOrgAdmin> loginOrgAdminList = new ArrayList<>();
+        int[] levels = new int[6];
+        int flag = 0, i = 0;
+        for(TOrgAdmin item : orgAdminList){
+            if(item.getFlevel().intValue() == flag +1 )
+                levels[flag++] = i;
+            if(item.getFid().equals(FID)){
+                loginOrgAdminList.add(item);
+            }
+            i++;
+        }
+        if(loginOrgAdminList.size() < 1)
+            return null;
+
+        addOrgUnit2(orgAdminList, loginOrgAdminList,FID, loginOrgAdminList.get(0).getFlevel(), levels);
+        log.info("en1");
+
+spring.datasource.wehr.pro.url = jdbc:mysql://10.0.8.144:3306/wesure_oa_sit?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&autoReconnectForPools=true&failOverReadOnly=false&allowMultiQueries=true&connectTimeout=5000&socketTimeout=30000&useSSL=true
+spring.datasource.wehr.pro.username = os_dev
+spring.datasource.wehr.pro.password = wesure@oss2017
