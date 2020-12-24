@@ -31,7 +31,7 @@ json 传递 bigint可能会截断后面几位数
 
 @RequestBody 将json的值，赋到一个类，在Controller接口里尽量使用这个，尽管只要传一个id
 
-当用json只需要传几个参数，又不想新建一个类时：
+当用json只需要传几个参数，又不想新建一个类时,可以用Map或者String存：
 https://my.oschina.net/u/779531/blog/893549
 
 java.util.ArrayList$SubList cannot be cast to 

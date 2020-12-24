@@ -79,6 +79,7 @@ MyBatis generator用数据库表生成数据代码的时候，除了生成实体
 https://www.cnblogs.com/dekevin/p/12301824.html
 http://docs.flycloud.me/docs/MBG/generatedobjects/exampleClassUsage.html
 https://developer.aliyun.com/article/645347
+只有一个变量时 example.createCriteria() 优于 example.or() 
 
 递归：
 https://mp.weixin.qq.com/s?__biz=MzI5MTU1MzM3MQ==&mid=2247483813&idx=1&sn=423c8804cd708b8892763a41cfcc8886&scene=21#wechat_redirect
@@ -91,5 +92,49 @@ https://cloud.tencent.com/developer/article/1430985
 
 面对前端的接口要问文档
 
+BigDecimal 存浮点数可以精确计算，构造用字符串最准确，用于需要精细的计算可以大数
+https://blog.csdn.net/PacosonSWJTU/article/details/80490464
 
+如何导出MySQL索引的创建语句
+SELECT
+CONCAT('ALTER TABLE `',TABLE_NAME,'` ', 'ADD ',
+IF( any_value(NON_UNIQUE )= 1,
+CASE UPPER(any_value(INDEX_TYPE))
+WHEN 'FULLTEXT' THEN 'FULLTEXT INDEX'
+WHEN 'SPATIAL' THEN 'SPATIAL INDEX'
+ELSE CONCAT('INDEX `',
+INDEX_NAME,
+'` USING ',
+any_value(INDEX_TYPE)
+)
+END,
+IF(UPPER(INDEX_NAME) = 'PRIMARY',
+CONCAT('PRIMARY KEY USING ',
+any_value(INDEX_TYPE)
+),
+CONCAT('UNIQUE INDEX `',
+INDEX_NAME,
+'` USING ',
+any_value(INDEX_TYPE)
+)
+)
+),'(', GROUP_CONCAT(DISTINCT CONCAT('`', COLUMN_NAME, '`') ORDER BY SEQ_IN_INDEX ASC SEPARATOR ', '), ');') AS 'Show_Add_Indexes'
+FROM information_schema.STATISTICS
+WHERE TABLE_SCHEMA = '#数据库名称' AND TABLE_NAME='#表名称'
+GROUP BY TABLE_NAME, INDEX_NAME
+ORDER BY TABLE_NAME ASC, INDEX_NAME ASC
 
+SELECT CONCAT('ALTER TABLE ',TABLE_NAME,' MODIFY COLUMN ',COLUMN_NAME,' ',DATA_TYPE,'(',CHARACTER_MAXIMUM_LENGTH,')',' COLLATE utf8_bin '), TABLE_NAME,COLUMN_NAME,DATA_TYPE,CHARACTER_MAXIMUM_LENGTH 
+FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'wesure_oa_dev' and DATA_TYPE = 'varchar' 
+
+decimal.add(x)不会改变自身调用者的值
+
+原來JAVA中如果用BigDecimal做除法的時候一定要在divide方法中傳遞第二個引數，定義精確到小數點後幾位，否則在不整除的情況下，結果是無限迴圈小數時，就會丟擲以上異常。
+正確的格式是下面這樣子的：
+BigDecimal averageAmount = amountSum.divide(count,2,ROUND_HALF_DOWN);
+devide的函式定義如下：
+BigDecimal.divide(BigDecimal divisor, int scale, RoundingMode roundingMode) ;
+
+@Async 异步调用
+在Spring中，基于@Async标注的方法，称之为异步方法；
+这些方法将在执行的时候，将会在独立的线程中被执行，调用者无需等待它的完成，即可继续其他的操作。
